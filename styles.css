@@ -6,6 +6,11 @@
     box-sizing: border-box;
 }
 
+.personal__logo{
+    animation: bounce 1s ease-in 1s;
+
+}
+
 html{
     scroll-behavior: smooth;
 }
@@ -134,6 +139,15 @@ font-weight: 700;
     font-weight: bold;
 }
 
+@keyframes bounce{
+    0%{
+        transform: scale(.2);
+        opacity: 0;}
+    100%{
+        transform: scale(1.5);
+        opacity: 1;}
+    }
+
 /*ABOUT ME*/
 
 #about-me{
@@ -255,7 +269,7 @@ about-me__img{
     transform: scale(0.9);
 }
 .language{
-    width: 25%;
+    width: 75%;
     display: flex;
     justify-content: center;
     position: relative;
@@ -265,18 +279,20 @@ about-me__img{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 25px 16px;
+    padding: 8px 16px;
+    position: relative;
 }
 
 .language__list{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-    flex-wrap: wrap;
+    padding: 0 12px;
 }
 
 .language__name{
-    position: absolute;
+    position:absolute;
     bottom: 0;
     transform: scale(0);
     font-size: 20px;
