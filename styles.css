@@ -6,11 +6,6 @@
     box-sizing: border-box;
 }
 
-.personal__logo{
-    animation: bounce 1s ease-in 1s;
-
-}
-
 html{
     scroll-behavior: smooth;
 }
@@ -40,7 +35,7 @@ i:hover{
     opacity: 0.7;
 }
 
-.link__hover--effect:after{
+.link__hover--effect::after{
     content: "";
     position: absolute;
     height: 3px;
@@ -50,14 +45,14 @@ i:hover{
     transition: all 300ms ease;
 }
 
-.link__hover-effect--white:after{
+.link__hover-effect--white::after{
     background-color:#fff;
 }
 
-.link__hover-effect--black:after{
+.link__hover-effect--black::after{
     background: color #000;;
 }
-.link__hover--effect:hover:after{
+.link__hover--effect:hover::after{
     width: 100%;
     left: 0;
 }
@@ -127,16 +122,18 @@ font-weight: 700;
     transition: all 300ms ease;
 }
 
-.nav__link--anchor-primary:hover{
+.nav__link--anchor-primary::hover{
     background-color: #5d3eff;
     animation: fade-in 600ms 400ms forwards;
 }
 
 .personal__logo{
-    font-size: 24px;
     color: #6030b1;
-    margin: 0 12px;
+    margin: 12px 12px;
     font-weight: bold;
+    animation: bounce 1s ease-in 1s;
+border-radius: 70%;
+transform: scale(.45);
 }
 
 @keyframes bounce{
@@ -144,7 +141,7 @@ font-weight: 700;
         transform: scale(.2);
         opacity: 0;}
     100%{
-        transform: scale(1.5);
+        transform: scale(1.1);
         opacity: 1;}
     }
 
@@ -416,6 +413,7 @@ footer{
 .footer__logo--img{
     width: 70px;
     height: 70px;
+    border-radius: 28px;
 }
 
 .footer__social--link,
